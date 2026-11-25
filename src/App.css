@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap');
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #172033;
+  background: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { font-family: inherit; }
+.page-shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid #e5eaf1;
+}
+.brand { display: flex; align-items: center; gap: 0.8rem; }
+.brand-mark, .cart-status__icon {
+  display: grid;
+  place-items: center;
+  color: white;
+  background: #1d4ed8;
+  border-radius: 12px;
+}
+.brand-mark { width: 44px; height: 44px; }
+.eyebrow { margin: 0 0 0.2rem; color: #64748b; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.13em; }
+.brand h1 { margin: 0; font: 800 1.2rem Manrope, sans-serif; }
+.header-cart {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: white;
+  font-weight: 800;
+}
+.intro { padding: 3rem 0 1.7rem; }
+.intro .eyebrow { color: #2563eb; }
+.intro h2 { margin: 0.45rem 0; font: 800 clamp(2rem, 5vw, 3rem) Manrope, sans-serif; letter-spacing: -0.05em; }
+.intro > p:last-child { margin: 0; color: #64748b; }
+.cart-status {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid #bfdbfe;
+  border-radius: 15px;
+  background: #eff6ff;
+  color: #1e3a8a;
+}
+.cart-status__icon { flex: 0 0 40px; width: 40px; height: 40px; background: #dbeafe; color: #1d4ed8; }
+.cart-status p { margin: 0; font-size: 0.92rem; }
+.catalog-section { padding: 2.5rem 0 3rem; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1.2rem; }
+.section-heading h2 { margin: 0; font: 800 1.45rem Manrope, sans-serif; }
+.section-heading p { margin: 0.3rem 0 0; color: #64748b; font-size: 0.88rem; }
+.catalog-count { padding: 0.45rem 0.7rem; border-radius: 999px; background: #dcfce7; color: #166534; font-size: 0.76rem; font-weight: 800; }
+.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; }
+.product-badge { padding: 0.25rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 800; }
+.product-badge--new { background: #dbeafe; color: #1d4ed8; }
+.product-badge--sale { background: #fef3c7; color: #92400e; }
+footer { padding: 1.4rem 0 2rem; border-top: 1px solid #e5eaf1; color: #94a3b8; text-align: center; font-size: 0.78rem; }
+@media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) {
+  .page-shell { width: min(100% - 28px, 1120px); }
+  .intro { padding-top: 2.2rem; }
+  .product-grid { grid-template-columns: 1fr; }
+  .product-card__icon { height: 90px; }
+  .section-heading { align-items: start; }
+}
